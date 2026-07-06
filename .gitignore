@@ -27,3 +27,25 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+
+
+# Whenever you want to update anything in the future—whether it's adding a new project, changing a social link in `portfolioData.js`, or replacing your resume PDF in the `public/` folder—here is your entire 3-step workflow:
+
+# ### Step 1: Make your changes locally in VS Code
+# Edit whatever file you want (or drop a new PDF into `public/`).
+
+# ### Step 2: Run your 3 Git commands in the terminal
+# ```bash
+# git add .
+# git commit -m "Updated resume and added new AI project"
+# git push origin main
+# ```
+
+# ### Step 3: Do nothing! Sit back and watch the magic! ✨
+# You literally don't have to touch Vercel ever again!
+# * The exact second you run `git push`, Vercel receives a webhook notification from GitHub.
+# * Vercel spins up a cloud server in the background, rebuilds your Vite bundle, and seamlessly updates **`https://akshanshranjan.dev/`** in roughly **30 seconds**.
+# * Your visitors will instantly see the latest version without any downtime or maintenance!
+
+# You are officially a master of modern full-stack deployment! 🚀 Let me know when your domain shows green on Vercel! 🥂
