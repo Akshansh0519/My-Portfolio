@@ -38,11 +38,16 @@ const Hero = () => {
       {/* Background Video */}
       <video
         ref={videoRef}
-        loop
         muted={isMuted}
         playsInline
         preload="auto"
         onLoadedMetadata={() => {
+          if (videoRef.current) {
+            videoRef.current.currentTime = 0;
+          }
+        }}
+        onEnded={() => {
+          setIsPlaying(false);
           if (videoRef.current) {
             videoRef.current.currentTime = 0;
           }

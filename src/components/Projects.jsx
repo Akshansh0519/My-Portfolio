@@ -13,118 +13,169 @@ const ExternalLinkIcon = () => (
   </svg>
 );
 
-const ProjectCard = ({ project, aosDelay }) => (
-  <div 
-    data-aos="fade-up"
-    data-aos-delay={aosDelay}
-    className={`relative rounded-2xl p-[1px] group transition-all duration-500 ${
-      project.isFlagship 
-        ? 'bg-gradient-to-br from-red-500/50 via-white/10 to-red-500/30 hover:from-red-500 hover:via-red-400/30 hover:to-red-500/60' 
-        : 'bg-white/10 hover:bg-white/20'
-    }`}
-  >
-    <div className={`rounded-2xl p-6 md:p-8 h-full backdrop-blur-md transition-all duration-500 ${
-      project.isFlagship 
-        ? 'bg-[#0f0f0f]/95 group-hover:bg-[#0f0f0f]/90' 
-        : 'bg-[#111111]/90 group-hover:bg-[#111111]/80'
-    }`}>
-      {/* Badge */}
-      {project.badge && (
-        <span className="inline-block text-xs font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20 mb-4">
-          {project.badge}
-        </span>
-      )}
+// Stat chip row — each chip is a short, specific technical claim.
+// These replace undifferentiated prose and give the eye instant hooks.
+const projectMeta = {
+  "orqflow": {
+    summary: "Autonomous multi-agent AI orchestration platform built for production — LangGraph supervisor routes tasks to specialist agents via MCP tools.",
+    stats: ["11 API endpoints", "95-test suite", "4-tier LLM failover", "SSE streaming", "Redis rate-limiting", "Async PG memory"],
+  },
+  "syncnexus": {
+    summary: "Real-time collaborative workspace with an embedded RAG AI assistant — built for multi-user concurrency from day one.",
+    stats: ["Socket.IO × Redis adapter", "Direct-to-S3 uploads", "O(log N) cursor pagination", "768-dim embeddings", "Top-5 chunk retrieval", "BullMQ backoff workers"],
+  },
+  "linkforge": {
+    summary: "URL shortener and analytics engine optimized for high-concurrency — Redis cuts redirect latency by 82%.",
+    stats: ["45ms → 8ms latency", "Sliding-window rate limiter", "O(log n) per request", "Geography + device analytics", "Docker Compose", "GitHub Actions CI/CD"],
+  },
+  "axiom-pulse": {
+    summary: "Pixel-perfect crypto token discovery dashboard with enterprise SSO and real-time WebSocket price feeds.",
+    stats: ["Lighthouse >90 desktop", "Google + GitHub OAuth 2.0", "Skeleton loading states", "Component memoization", "Atomic Radix UI", "Redux state"],
+  },
+  "bluffbuster": {
+    summary: "Adversarial RL environment that trains an LLM examiner to expose bluffing — built for the Meta PyTorch OpenEnv Hackathon.",
+    stats: ["800 teams / 31,000+ registrants", "GRPO training (Unsloth/TRL)", "7 adversarial student styles", "10 ML topic sections", "ΔHt entropy reward shaping", "Calibrated belief tracking"],
+  },
+  "shopsense": {
+    summary: "Hybrid recommendation engine fusing 6 distinct ML models with MMR reranking — served through a Redis-cached FastAPI microservice.",
+    stats: ["6 fusion models", "ALS + BPR + NLP embeddings", "MMR diversity reranking", "H&M Fashion dataset", "MLflow experiment tracking", "Redis-cached API"],
+  },
+};
 
-      {/* Number + Title */}
-      <div className="flex items-baseline gap-4 mb-4">
-        <span className="text-5xl font-black text-white/10 font-serif italic">{project.number}</span>
-        <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">{project.title}</h3>
-      </div>
+const StatChip = ({ label }) => (
+  <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold text-white/60 bg-white/5 border border-white/10 hover:text-white/80 hover:bg-white/10 transition-colors duration-200 cursor-default whitespace-nowrap">
+    {label}
+  </span>
+);
 
-      {/* Description */}
-      <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6 max-w-2xl font-medium">
-        {project.description}
-      </p>
+const ProjectCard = ({ project, aosDelay }) => {
+  const meta = projectMeta[project.id] || {
+    summary: project.description,
+    stats: [],
+  };
 
-      {/* Tech Tags */}
-      <div className="flex flex-wrap gap-2 mb-8">
-        {project.techTags.map((tag) => (
-          <span 
-            key={tag}
-            className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
-          >
-            {tag}
+  return (
+    <div
+      data-aos="fade-up"
+      data-aos-delay={aosDelay}
+      className={`relative rounded-2xl p-[1px] group transition-all duration-500 ${
+        project.isFlagship
+          ? 'bg-gradient-to-br from-red-500/50 via-white/10 to-red-500/30 hover:from-red-500 hover:via-red-400/30 hover:to-red-500/60'
+          : 'bg-white/10 hover:bg-white/20'
+      }`}
+    >
+      <div className={`rounded-2xl p-6 md:p-8 h-full backdrop-blur-md transition-all duration-500 ${
+        project.isFlagship
+          ? 'bg-[#0f0f0f]/95 group-hover:bg-[#0f0f0f]/90'
+          : 'bg-[#111111]/90 group-hover:bg-[#111111]/80'
+      }`}>
+        {/* Badge */}
+        {project.badge && (
+          <span className="inline-block text-xs font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20 mb-4">
+            {project.badge}
           </span>
-        ))}
-      </div>
-
-      {/* Action Buttons */}
-      <div className="flex flex-wrap gap-3">
-        {/* GitHub */}
-        {project.links.github && (
-          <a 
-            href={project.links.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white hover:text-black transition-all duration-300 group/btn"
-          >
-            <GitHubIcon />
-            GitHub
-          </a>
         )}
 
-        {/* Live Demo (single) */}
-        {project.links.demo !== undefined && (
-          <a 
-            href={project.links.demo || '#'}
-            target={project.links.demo ? "_blank" : undefined}
-            rel={project.links.demo ? "noopener noreferrer" : undefined}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-              project.links.demo 
-                ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)]' 
-                : 'bg-white/5 text-white/40 border border-white/10 cursor-not-allowed'
-            }`}
-          >
-            <ExternalLinkIcon />
-            {project.links.demo ? 'Live Demo' : 'Demo Coming Soon'}
-          </a>
+        {/* Number + Title */}
+        <div className="flex items-baseline gap-4 mb-3">
+          <span className="text-5xl font-black text-white/10 font-serif italic">{project.number}</span>
+          <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">{project.title}</h3>
+        </div>
+
+        {/* 1-sentence plain-English summary — scannable hook */}
+        <p className="text-white/70 text-sm md:text-base leading-relaxed mb-4 max-w-2xl font-medium">
+          {meta.summary}
+        </p>
+
+        {/* Stat chips — specific technical claims the eye can extract in <5 seconds */}
+        {meta.stats.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-6 pb-5 border-b border-white/5">
+            {meta.stats.map((stat) => (
+              <StatChip key={stat} label={stat} />
+            ))}
+          </div>
         )}
 
-        {/* Frontend Demo (Karigar) */}
-        {project.links.frontendDemo && (
-          <a 
-            href={project.links.frontendDemo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white text-sm font-semibold hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)] transition-all duration-300"
-          >
-            <ExternalLinkIcon />
-            Frontend Demo
-          </a>
-        )}
+        {/* Tech Tags */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          {project.techTags.map((tag) => (
+            <span
+              key={tag}
+              className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
 
-        {/* Backend API (Karigar) */}
-        {project.links.backendApi && (
-          <a 
-            href={project.links.backendApi}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white/20 transition-all duration-300"
-          >
-            <ExternalLinkIcon />
-            Backend API
-          </a>
-        )}
+        {/* Action Buttons */}
+        <div className="flex flex-wrap gap-3">
+          {/* GitHub */}
+          {project.links.github && (
+            <a
+              href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white hover:text-black transition-all duration-300 group/btn"
+            >
+              <GitHubIcon />
+              GitHub
+            </a>
+          )}
+
+          {/* Live Demo (single) */}
+          {project.links.demo !== undefined && (
+            <a
+              href={project.links.demo || '#'}
+              target={project.links.demo ? "_blank" : undefined}
+              rel={project.links.demo ? "noopener noreferrer" : undefined}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                project.links.demo
+                  ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)]'
+                  : 'bg-white/5 text-white/40 border border-white/10 cursor-not-allowed'
+              }`}
+            >
+              <ExternalLinkIcon />
+              {project.links.demo ? 'Live Demo' : 'Demo Coming Soon'}
+            </a>
+          )}
+
+          {/* Frontend Demo */}
+          {project.links.frontendDemo && (
+            <a
+              href={project.links.frontendDemo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white text-sm font-semibold hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)] transition-all duration-300"
+            >
+              <ExternalLinkIcon />
+              Frontend Demo
+            </a>
+          )}
+
+          {/* Backend API */}
+          {project.links.backendApi && (
+            <a
+              href={project.links.backendApi}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white/20 transition-all duration-300"
+            >
+              <ExternalLinkIcon />
+              Backend API
+            </a>
+          )}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Projects = () => {
   return (
     <section id="projects" className="bg-[#0a0a0a] pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Header */}
         <div data-aos="fade-up" className="mb-16 md:mb-20">
           <div className="inline-block border border-white/20 rounded-full px-5 py-1.5 text-sm text-white/60 font-bold mb-8 shadow-sm bg-white/5 backdrop-blur-sm">
@@ -141,9 +192,9 @@ const Projects = () => {
         {/* Project Cards */}
         <div className="flex flex-col gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <ProjectCard 
-              key={project.id} 
-              project={project} 
+            <ProjectCard
+              key={project.id}
+              project={project}
               aosDelay={String((index + 1) * 100)}
             />
           ))}

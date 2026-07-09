@@ -34,9 +34,8 @@ const LeadershipItem = ({ item, index }) => {
           </p>
         </div>
       </div>
-
       {/* Spacing spacer for desktop */}
-      <div className="hidden md:block w-[45%] order-2" />
+      <div className={`hidden md:block w-[45%] ${isEven ? 'order-2' : 'order-1'}`} />
     </div>
   );
 };

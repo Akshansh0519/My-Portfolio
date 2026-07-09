@@ -75,7 +75,7 @@ export const skillsContent = {
       text: "Containerizing with Docker Compose, deploying to Railway/Vercel, setting up GitHub Actions, and monitoring with structured logging and regression test suites.",
     },
   ],
-  endText: "Ship it. 🚀",
+  endText: "Ship it.",
 };
 
 // Technical Skills Data
@@ -84,68 +84,67 @@ export const technicalSkills = {
     {
       title: "Programming Languages",
       skills: [
-        { name: "JavaScript", level: 90 },
-        { name: "Python", level: 88 },
-        { name: "TypeScript", level: 82 },
-        { name: "C++", level: 85 },
-        { name: "SQL", level: 80 },
-        { name: "Java", level: 70 },
+        { name: "JavaScript" },
+        { name: "Python" },
+        { name: "C++" },
+        { name: "SQL" },
+        { name: "Java" },
       ],
     },
     {
       title: "Backend & APIs",
       skills: [
-        { name: "Node.js / Express", level: 88 },
-        { name: "FastAPI", level: 82 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "Prisma ORM", level: 83 },
-        { name: "Redis", level: 85 },
-        { name: "Socket.io / WebSocket", level: 82 },
-        { name: "BullMQ", level: 78 },
+        { name: "Node.js / Express" },
+        { name: "FastAPI" },
+        { name: "PostgreSQL" },
+        { name: "Prisma ORM" },
+        { name: "Sequelize" },
+        { name: "Redis" },
+        { name: "Socket.io / WebSocket" },
+        { name: "BullMQ" },
       ],
     },
     {
       title: "AI / LLM",
       skills: [
-        { name: "LangGraph", level: 80 },
-        { name: "LangChain", level: 78 },
-        { name: "RAG Pipelines", level: 82 },
-        { name: "MCP (Model Context Protocol)", level: 75 },
-        { name: "ChromaDB", level: 78 },
-        { name: "OpenAI / Gemini API", level: 85 },
-        { name: "Hugging Face", level: 75 },
+        { name: "LangGraph" },
+        { name: "LangSmith" },
+        { name: "RAG Pipelines" },
+        { name: "MCP (Model Context Protocol)" },
+        { name: "ChromaDB" },
+        { name: "Groq / Gemini API" },
       ],
     },
     {
       title: "Frontend",
       skills: [
-        { name: "React", level: 85 },
-        { name: "Next.js 14", level: 82 },
-        { name: "Tailwind CSS", level: 88 },
-        { name: "Redux Toolkit", level: 78 },
-        { name: "Radix UI", level: 75 },
+        { name: "React" },
+        { name: "Next.js 14" },
+        { name: "Tailwind CSS" },
+        { name: "Redux Toolkit" },
+        { name: "Radix UI" },
       ],
     },
     {
       title: "DevOps & Tools",
       skills: [
-        { name: "Git & GitHub", level: 90 },
-        { name: "Docker / Compose", level: 82 },
-        { name: "GitHub Actions CI/CD", level: 78 },
-        { name: "Vercel / Railway", level: 85 },
-        { name: "Linux", level: 75 },
-        { name: "Postman", level: 88 },
+        { name: "Git & GitHub" },
+        { name: "Docker / Compose" },
+        { name: "GitHub Actions CI/CD" },
+        { name: "Vercel / Render" },
+        { name: "Upstash.io" },
+        { name: "Postman" },
       ],
     },
     {
       title: "CS Core & Concepts",
       skills: [
-        { name: "Data Structures & Algorithms", level: 85 },
-        { name: "OOP & Design Patterns", level: 85 },
-        { name: "Database Systems", level: 83 },
-        { name: "Operating Systems", level: 78 },
-        { name: "Machine Learning", level: 80 },
-        { name: "Distributed Systems", level: 78 },
+        { name: "Data Structures & Algorithms" },
+        { name: "OOP & Design Patterns" },
+        { name: "Database Systems" },
+        { name: "Operating Systems" },
+        { name: "Machine Learning" },
+        { name: "Distributed Systems" },
       ],
     },
   ],
@@ -163,7 +162,6 @@ export const aiResearch = {
       description:
         "Published and presented an original research paper on Deep Learning-based Power Transformer Fault Analysis at GCON–IEEE, IIT Guwahati.",
       stats: "Jun 2026 · IIT Guwahati",
-      icon: "📄",
       link: null,
     },
     {
@@ -171,7 +169,6 @@ export const aiResearch = {
       description:
         "Selected as a finalist at the Meta PyTorch OpenEnv Hackathon × Scaler — among 800 teams chosen from 31,000+ registrations nationwide.",
       stats: "800 / 31,000+ Teams",
-      icon: "🏆",
       link: "https://github.com/Akshansh0519/BluffBuster_env",
     },
     {
@@ -179,7 +176,6 @@ export const aiResearch = {
       description:
         "Fine-tuned XLM-Roberta for code-mixed NLP across 5 Indian languages, achieving 91% weighted F1-score. Built a PDF RAG chatbot using Gemini API + BM25 retrieval.",
       stats: "91% Weighted F1-Score",
-      icon: "🤖",
       link: null,
     },
     {
@@ -187,7 +183,6 @@ export const aiResearch = {
       description:
         "Actively building production-grade open-source projects at the intersection of distributed systems, AI orchestration, and real-time collaboration.",
       stats: "6 Public Repos",
-      icon: "⚡",
       link: "https://github.com/Akshansh0519",
     },
   ],
@@ -246,42 +241,34 @@ export const internshipsList = [
 export const softSkillsList = [
   {
     name: "Problem Solving",
-    icon: "🧩",
     desc: "Breaking complex distributed systems problems into clean, testable, modular solutions across AI and backend engineering.",
   },
   {
     name: "System Thinking",
-    icon: "🧠",
     desc: "Designing end-to-end architectures — from LangGraph state machines to Redis rate limiters and BullMQ worker queues.",
   },
   {
     name: "Research Mindset",
-    icon: "🔬",
     desc: "IEEE-published researcher comfortable with NLP papers, reward shaping, fine-tuning experiments, and academic writing.",
   },
   {
     name: "Communication",
-    icon: "💬",
     desc: "Presenting research at IEEE conferences, writing production-grade documentation, and collaborative code reviews.",
   },
   {
     name: "Team Collaboration",
-    icon: "🤝",
     desc: "Hackathon finalist, BITS Pilani CS minor student working across AI, distributed systems, and web engineering.",
   },
   {
     name: "Adaptability",
-    icon: "🌟",
     desc: "Rapidly switching between LangGraph multi-agent systems, Socket.IO real-time apps, and Next.js frontends.",
   },
   {
     name: "Attention to Detail",
-    icon: "🎯",
     desc: "Writing 95-test regression suites, enforcing Redis sliding-window rate limiting, and pixel-perfect UI dashboards.",
   },
   {
     name: "Continuous Learning",
-    icon: "📚",
     desc: "Exploring RAG pipelines, MCP microservices, GRPO training, and production-grade backend distributed patterns.",
   },
 ];
@@ -291,7 +278,7 @@ export const projects = [
   {
     id: "orqflow",
     number: "01",
-    badge: "🚀 Flagship Project",
+    badge: " Flagship Project",
     title: "OrqFlow",
     description:
       "Production-grade autonomous multi-agent AI orchestration platform. A LangGraph supervisor dynamically routes complex tasks to specialist agents (Researcher, Analyst, Coder, Responder), each equipped with real external tools via the Model Context Protocol (MCP). Features 4-tier LLM failover (Groq 70B → Groq 8B → Gemini 2.5 Flash → Gemini 1.5 Flash), Redis rate-limiting, async PostgreSQL memory, and an 11-endpoint FastAPI backend with SSE streaming — validated by a 95-test regression suite.",
@@ -357,7 +344,7 @@ export const projects = [
   {
     id: "bluffbuster",
     number: "05",
-    badge: "🏆 Hackathon · Meta PyTorch",
+    badge: " Hackathon · Meta PyTorch",
     title: "BluffBuster — The Examiner",
     description:
       "Adversarial RL environment for the Meta PyTorch OpenEnv Hackathon × Scaler (800 teams / 31,000+ registrations). A GRPO-trained LLM examiner agent learns to design diagnostic questions that expose confident bluffing across 7 student styles and 10 ML topics — using information-gain reward shaping and calibrated terminal scoring without any human-designed rules.",

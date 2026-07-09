@@ -2,10 +2,10 @@ import React from 'react';
 import { internshipsList } from '../data/portfolioData';
 
 const InternshipCard = ({ intern, index }) => (
-  <div 
+  <div
     data-aos="fade-up"
     data-aos-delay={index * 150}
-    className="bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:scale-[1.02] hover:bg-black/35 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 flex flex-col justify-between"
+    className="bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:scale-[1.02] hover:bg-black/35 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 flex flex-col justify-between w-full max-w-xl"
   >
     <div>
       <div className="flex justify-between items-start mb-6">
@@ -39,7 +39,7 @@ const InternshipCard = ({ intern, index }) => (
       <h4 className="text-white/60 text-xs font-bold uppercase tracking-wider mb-3">Technologies:</h4>
       <div className="flex flex-wrap gap-2">
         {intern.tech.map((t) => (
-          <span 
+          <span
             key={t}
             className="px-3 py-1 text-xs font-mono font-bold text-white bg-white/10 rounded-full border border-white/10 hover:bg-white/20 transition-all"
           >
@@ -54,7 +54,7 @@ const InternshipCard = ({ intern, index }) => (
 const Internships = () => {
   return (
     <section className="bg-[#ff2a2a] pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans">
-      
+
       {/* Torn paper divider at top */}
       <div className="absolute top-0 left-0 w-full pointer-events-none z-10 transform -translate-y-[1px] rotate-180">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-12 md:h-20 fill-[#0a0a0a]">
@@ -63,7 +63,7 @@ const Internships = () => {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-20">
-        
+
         {/* Header */}
         <div data-aos="fade-up" className="mb-16 md:mb-20 text-center">
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4 tracking-tight uppercase">
@@ -74,8 +74,8 @@ const Internships = () => {
           </p>
         </div>
 
-        {/* Internship Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* Cards: centered layout — single card or multiple, always balanced */}
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           {internshipsList.map((intern, index) => (
             <InternshipCard key={intern.organization} intern={intern} index={index} />
           ))}
