@@ -36,9 +36,7 @@ import skyelite8 from '../assets/Project details/SkyElite Screenshots/Booking ti
 
 import axiom1 from '../assets/Project details/Axiom Screenshots/Landing page.png';
 import axiom2 from '../assets/Project details/Axiom Screenshots/Login Page.png';
-import axiom3 from '../assets/Project details/Axiom Screenshots/Authenticated via SSO.png';
-import axiom4 from '../assets/Project details/Axiom Screenshots/Live sorting Features.png';
-import axiom5 from '../assets/Project details/Axiom Screenshots/Token details.png';
+import axiom3 from '../assets/Project details/Axiom Screenshots/Token details.png';
 
 // ─── Project screenshots map ───────────────────────────────
 const projectImages = {
@@ -46,7 +44,7 @@ const projectImages = {
   syncnexus:    [syncnexus1, syncnexus2, syncnexus3, syncnexus4],
   linkforge:    [linkforge1, linkforge2, linkforge3, linkforge4, linkforge5, linkforge6, linkforge7],
   skyelite:     [skyelite1, skyelite2, skyelite3, skyelite4, skyelite5, skyelite6, skyelite7, skyelite8],
-  'axiom-pulse': [axiom1, axiom2, axiom3, axiom4, axiom5],
+  'axiom-pulse': [axiom1, axiom2, axiom3],
   bluffbuster:  null, // explicitly no gallery
   shopsense:    [shopsense1, shopsense2, shopsense3, shopsense4],
 };
