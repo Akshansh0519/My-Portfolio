@@ -16,7 +16,7 @@ export const personalInfo = {
     secondary: "akshanshranjan007@gmail.com",
   },
   summary:
-    "EEE undergrad with a CS minor at BITS Pilani, building production-grade AI systems and full-stack applications — from LangGraph multi-agent orchestration to real-time collaboration backends and modern web dashboards.",
+    "EEE undergrad with a CS minor at BITS Pilani, building production-grade AI systems and full-stack applications — from LangGraph multi-agent orchestration to distributed microservice architectures with RabbitMQ event queues and real-time collaboration backends.",
   resumeSdeUrl: "/Akshansh_Ranjan_Resume_SDE.pdf",
   resumeAiUrl: "/Akshansh_Ranjan_Resume_AI_ML.pdf",
 };
@@ -32,7 +32,7 @@ export const heroContent = {
   greeting: "Hi, I'm Akshansh Ranjan",
   titleHighlight: "Full Stack & AI Engineer",
   subtitle:
-    "I build production-ready AI systems and full-stack applications, from LangGraph agents to real-time collaborative platforms.",
+    "I engineer scalable AI applications and distributed full-stack platforms — bridging autonomous LangGraph agents with real-time collaborative systems.",
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
@@ -44,7 +44,7 @@ export const heroContent = {
 
 export const aboutContent = {
   heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Akshansh Ranjan</span>, an EEE undergrad with a Computer Science minor at <strong>BITS Pilani, Hyderabad Campus</strong>. I build production-grade AI systems and full-stack applications — from multi-agent LLM orchestration to real-time collaboration backends and modern web dashboards.`,
+  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Akshansh Ranjan</span>, an EEE undergrad with a Computer Science minor at <strong>BITS Pilani, Hyderabad Campus</strong>. I specialize in <span class="text-black font-black">building robust microservice architectures</span> and production-grade AI systems — bridging multi-agent LLM orchestration with event-driven backends and real-time collaborative dashboards.`,
   techStack: ["Python", "Node.js", "React"],
 };
 
@@ -97,11 +97,15 @@ export const technicalSkills = {
         { name: "Node.js / Express" },
         { name: "FastAPI" },
         { name: "PostgreSQL" },
+        { name: "MySQL" },
         { name: "Prisma ORM" },
-        { name: "Sequelize" },
+        { name: "Sequelize ORM" },
         { name: "Redis" },
+        { name: "RabbitMQ / AMQP" },
         { name: "Socket.io / WebSocket" },
         { name: "BullMQ" },
+        { name: "Axios / REST" },
+        { name: "Nodemailer" },
       ],
     },
     {
@@ -132,6 +136,8 @@ export const technicalSkills = {
         { name: "Docker / Compose" },
         { name: "GitHub Actions CI/CD" },
         { name: "Vercel / Render" },
+        { name: "CloudAMQP" },
+        { name: "Aiven (MySQL Cloud)" },
         { name: "Upstash.io" },
         { name: "Postman" },
       ],
@@ -181,8 +187,8 @@ export const aiResearch = {
     {
       title: "Open Source Engineering",
       description:
-        "Actively building production-grade open-source projects at the intersection of distributed systems, AI orchestration, and real-time collaboration.",
-      stats: "6 Public Repos",
+        "Actively building production-grade open-source projects at the intersection of distributed systems, AI orchestration, microservice architectures, and real-time collaboration.",
+      stats: "7 Public Repos",
       link: "https://github.com/Akshansh0519",
     },
   ],
@@ -328,8 +334,35 @@ export const projects = [
     isFlagship: false,
   },
   {
-    id: "axiom-pulse",
+    id: "skyelite",
     number: "04",
+    badge: " Microservice Architecture",
+    title: "SkyElite — Flight Booking Platform",
+    description:
+      "Production-grade distributed flight booking platform built on a 3-microservice architecture. The Flights Service manages a normalized MySQL schema via Sequelize ORM with full CRUD and seat-inventory operations. The Booking Service implements strict ACID 2-phase commit transactions with distributed idempotency keys to eliminate duplicate bookings under concurrent load. Post-payment, an event envelope is published to a RabbitMQ queue decoupling the Notification Service, which consumes it asynchronously via Nodemailer to dispatch a full responsive HTML E-Ticket (boarding gate, route, fare, baggage info) to the passenger's inbox. A Next.js 16 portal provides a live search, booking, and payment UI with real-time status transitions.",
+    techTags: [
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Sequelize ORM",
+      "RabbitMQ",
+      "Next.js 16",
+      "TypeScript",
+      "Nodemailer",
+      "Axios",
+      "CloudAMQP",
+      "Aiven",
+      "Render",
+    ],
+    links: {
+      github: "https://github.com/Akshansh0519/Flight_Search_API",
+      demo: null,
+    },
+    isFlagship: false,
+  },
+  {
+    id: "axiom-pulse",
+    number: "05",
     badge: null,
     title: "Axiom Pulse",
     description:
@@ -337,13 +370,13 @@ export const projects = [
     techTags: ["Next.js 14", "TypeScript", "NextAuth.js", "OAuth 2.0", "Radix UI", "Tailwind CSS", "Redux"],
     links: {
       github: "https://github.com/Akshansh0519/Axiom_Pulse",
-      demo: null, // Add live demo URL when available: https://axiomfrontend-eta.vercel.app/
+      demo: "https://axiom-pulse-webapp.vercel.app/",
     },
     isFlagship: false,
   },
   {
     id: "bluffbuster",
-    number: "05",
+    number: "06",
     badge: " Hackathon · Meta PyTorch",
     title: "BluffBuster — The Examiner",
     description:
@@ -351,13 +384,13 @@ export const projects = [
     techTags: ["Python", "TRL GRPO", "Unsloth", "OpenEnv", "Qwen2.5-7B", "Weights & Biases", "Pydantic"],
     links: {
       github: "https://github.com/Akshansh0519/BluffBuster_env",
-      demo: null, // HuggingFace Space — add when available
+      demo: null,
     },
     isFlagship: false,
   },
   {
     id: "shopsense",
-    number: "06",
+    number: "07",
     badge: null,
     title: "ShopSense",
     description:
@@ -365,7 +398,7 @@ export const projects = [
     techTags: ["Python", "FastAPI", "Redis", "MLflow", "scikit-learn", "ALS", "BPR", "MMR"],
     links: {
       github: "https://github.com/Akshansh0519/ShopSense",
-      demo: null, // Add live demo URL when available
+      demo: "https://shop-sense-five.vercel.app/",
     },
     isFlagship: false,
   },

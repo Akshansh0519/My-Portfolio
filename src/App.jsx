@@ -6,6 +6,7 @@ import About from './components/About'
 import TechnicalSkills from './components/TechnicalSkills'
 import Services from './components/Services'
 import Projects from './components/Projects'
+import MiniProjects from './components/MiniProjects'
 import ContentCreator from './components/ContentCreator'
 import Internships from './components/Internships'
 import Leadership from './components/Leadership'
@@ -23,6 +24,7 @@ function App() {
       <TechnicalSkills />
       <Services />
       <Projects />
+      <MiniProjects />
       <ContentCreator />
       <Internships />
       <Leadership />

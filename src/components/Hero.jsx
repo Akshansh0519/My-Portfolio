@@ -188,32 +188,30 @@ const Hero = () => {
             </a>
           </div>
         </div>
+      </div>
 
-        {/* Right Side: Play Video Button */}
-        <div 
-          data-aos="zoom-in"
-          data-aos-delay="600"
-          className="mt-8 md:mt-0 flex flex-row md:flex-col items-center gap-2 md:gap-3 cursor-pointer group self-start md:self-auto md:translate-x-[68px] md:translate-y-[116px] transition-transform duration-300"
-          onClick={toggleVideo}
-          id="hero-play-intro"
-        >
-          <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border border-white/30 bg-black/20 backdrop-blur-md flex justify-center items-center group-hover:scale-110 group-hover:bg-[#ff2a2a] transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_40px_rgba(255,42,42,0.6)]">
-            {!isPlaying || isMuted ? (
-              // Play Icon
-              <svg className="w-5 h-5 md:w-8 md:h-8 text-white ml-0.5 md:ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            ) : (
-              // Pause Icon
-              <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-              </svg>
-            )}
-          </div>
-          <span className="text-white text-[10px] md:text-xs font-bold tracking-widest uppercase opacity-70 group-hover:opacity-100 transition-opacity">
-            {!isPlaying || isMuted ? "Play Intro" : "Pause"}
-          </span>
+      {/* Right Side: Play Video Button (Absolute positioned relative to screen section for robust alignment across browsers) */}
+      <div 
+        className="mt-8 md:mt-0 flex flex-row md:flex-col items-center gap-2 md:gap-3 cursor-pointer group absolute bottom-24 right-6 md:bottom-[3.5%] md:right-[5.8%] z-30 transition-all duration-300"
+        onClick={toggleVideo}
+        id="hero-play-intro"
+      >
+        <div className="w-16 h-16 md:w-[106px] md:h-[106px] rounded-full border-2 border-white/40 bg-black/40 backdrop-blur-md flex justify-center items-center group-hover:bg-[#ff2a2a] transition-colors duration-500 shadow-[0_0_35px_rgba(255,255,255,0.15)] group-hover:shadow-[0_0_45px_rgba(255,42,42,0.6)]">
+          {!isPlaying || isMuted ? (
+            // Play Icon
+            <svg className="w-8 h-8 md:w-10 md:h-10 text-white ml-0.5 md:ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          ) : (
+            // Pause Icon
+            <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+            </svg>
+          )}
         </div>
+        <span className="text-white text-[11px] md:text-xs font-bold tracking-widest uppercase opacity-90 group-hover:opacity-100 transition-opacity drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+          {!isPlaying || isMuted ? "Play Intro" : "Pause"}
+        </span>
       </div>
 
       {/* Scroll Indicator */}
