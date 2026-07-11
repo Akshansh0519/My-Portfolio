@@ -315,7 +315,7 @@ export const projects = [
     techTags: ["Node.js", "Socket.IO", "ChromaDB", "BullMQ", "Redis", "PostgreSQL", "Prisma", "Gemini"],
     links: {
       github: "https://github.com/Akshansh0519/SyncNexus", // Confirm URL
-      demo: null, // Add live demo URL when available
+      demo: "https://sync-nexus.vercel.app/",
     },
     isFlagship: false,
   },
