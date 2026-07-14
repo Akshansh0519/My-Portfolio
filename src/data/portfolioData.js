@@ -356,7 +356,7 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/Akshansh0519/Flight_Search_API",
-      demo: null,
+      demo: "https://flight-search-api-eosin.vercel.app/",
     },
     isFlagship: false,
   },
@@ -375,22 +375,8 @@ export const projects = [
     isFlagship: false,
   },
   {
-    id: "bluffbuster",
-    number: "06",
-    badge: " Hackathon · Meta PyTorch",
-    title: "BluffBuster — The Examiner",
-    description:
-      "Adversarial RL environment for the Meta PyTorch OpenEnv Hackathon × Scaler (800 teams / 31,000+ registrations). A GRPO-trained LLM examiner agent learns to design diagnostic questions that expose confident bluffing across 7 student styles and 10 ML topics — using information-gain reward shaping and calibrated terminal scoring without any human-designed rules.",
-    techTags: ["Python", "TRL GRPO", "Unsloth", "OpenEnv", "Qwen2.5-7B", "Weights & Biases", "Pydantic"],
-    links: {
-      github: "https://github.com/Akshansh0519/BluffBuster_env",
-      demo: null,
-    },
-    isFlagship: false,
-  },
-  {
     id: "shopsense",
-    number: "07",
+    number: "06",
     badge: null,
     title: "ShopSense",
     description:
@@ -399,6 +385,19 @@ export const projects = [
     links: {
       github: "https://github.com/Akshansh0519/ShopSense",
       demo: "https://shop-sense-five.vercel.app/",
+    },
+    isFlagship: false,
+  },
+  {
+    id: "bluffbuster",
+    number: "07",
+    badge: " Hackathon · Meta PyTorch",
+    title: "BluffBuster — The Examiner",
+    description:
+      "Adversarial RL environment for the Meta PyTorch OpenEnv Hackathon × Scaler (800 teams / 31,000+ registrations). A GRPO-trained LLM examiner agent learns to design diagnostic questions that expose confident bluffing across 7 student styles and 10 ML topics — using information-gain reward shaping and calibrated terminal scoring without any human-designed rules.",
+    techTags: ["Python", "TRL GRPO", "Unsloth", "OpenEnv", "Qwen2.5-7B", "Weights & Biases", "Pydantic"],
+    links: {
+      github: "https://github.com/Akshansh0519/BluffBuster_env",
     },
     isFlagship: false,
   },
