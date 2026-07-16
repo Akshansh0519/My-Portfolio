@@ -329,7 +329,7 @@ export const projects = [
     techTags: ["Express", "TypeScript", "PostgreSQL", "Prisma", "Redis", "Docker", "GitHub Actions"],
     links: {
       github: "https://github.com/Akshansh0519/LinkForge",
-      demo: null, // Add live demo URL when available
+      demo: "https://link-forge-iota.vercel.app/", 
     },
     isFlagship: false,
   },
