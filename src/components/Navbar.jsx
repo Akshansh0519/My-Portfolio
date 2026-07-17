@@ -56,15 +56,8 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Right Side: CTA Button */}
-        <div className="hidden md:block">
-          <a 
-            href={hireMeMailto}
-            className="px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 backdrop-blur-md"
-          >
-            Hire Me
-          </a>
-        </div>
+        {/* Right Side: Spacer for symmetry or can be empty */}
+        <div className="hidden md:block w-24"></div>
 
         {/* Mobile Hamburger Menu Icon */}
         <div className="md:hidden flex items-center">
@@ -100,15 +93,7 @@ const Navbar = () => {
               {link}
             </a>
           ))}
-          <div className="pt-4 pb-2">
-             <a 
-               href={hireMeMailto}
-               onClick={() => setIsOpen(false)} 
-               className="inline-block px-6 py-3 rounded-full bg-white text-[#ff2a2a] font-black hover:bg-black hover:text-white transition-colors w-full text-center shadow-lg"
-             >
-               Hire Me
-             </a>
-          </div>
+
         </div>
       </div>
     </nav>
