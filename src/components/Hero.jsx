@@ -89,7 +89,7 @@ const Hero = () => {
           href={socialLinks.leetcode} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-white/60 hover:text-[#ff2a2a] transition-all duration-300 transform hover:scale-125"
+          className="text-white/60 hover:text-cyan-400 transition-all duration-300 transform hover:scale-125"
           aria-label="LeetCode"
         >
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -115,7 +115,7 @@ const Hero = () => {
             <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white" aria-label="LinkedIn">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
             </a>
-            <a href={socialLinks.leetcode} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#ff2a2a]" aria-label="LeetCode">
+            <a href={socialLinks.leetcode} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400" aria-label="LeetCode">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
             </a>
           </div>
@@ -125,7 +125,7 @@ const Hero = () => {
             data-aos="fade-up"
             className="text-white text-3xl md:text-5xl font-bold mb-4 tracking-tight"
           >
-            {heroContent.greeting}, <br /> <span className="text-transparent [-webkit-text-stroke:1.5px_black]">{heroContent.titleHighlight}</span>
+            {heroContent.greeting}, <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">{heroContent.titleHighlight}</span>
           </h1>
 
           {/* Subheading */}
@@ -179,7 +179,7 @@ const Hero = () => {
               href={heroContent.ctaResumeAi.href}
               id="hero-resume-ai"
               download
-              className="px-4 py-2 md:px-6 md:py-2 text-xs md:text-base rounded-full bg-[#ff2a2a]/80 border border-red-400/50 text-white font-semibold hover:bg-[#ff2a2a] transition-all duration-300 backdrop-blur-md flex items-center gap-2"
+              className="px-4 py-2 md:px-6 md:py-2 text-xs md:text-base rounded-full bg-emerald-500/80 border border-emerald-400/50 text-white font-semibold hover:bg-emerald-500 transition-all duration-300 backdrop-blur-md flex items-center gap-2"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -196,7 +196,7 @@ const Hero = () => {
         onClick={toggleVideo}
         id="hero-play-intro"
       >
-        <div className="w-16 h-16 md:w-[106px] md:h-[106px] rounded-full border-2 border-white/40 bg-black/40 backdrop-blur-md flex justify-center items-center group-hover:bg-[#ff2a2a] transition-colors duration-500 shadow-[0_0_35px_rgba(255,255,255,0.15)] group-hover:shadow-[0_0_45px_rgba(255,42,42,0.6)]">
+        <div className="w-16 h-16 md:w-[106px] md:h-[106px] rounded-full border-2 border-white/40 bg-black/40 backdrop-blur-md flex justify-center items-center group-hover:bg-cyan-500/80 transition-colors duration-500 shadow-[0_0_35px_rgba(255,255,255,0.15)] group-hover:shadow-[0_0_45px_rgba(0,240,255,0.5)]">
           {!isPlaying || isMuted ? (
             // Play Icon
             <svg className="w-8 h-8 md:w-10 md:h-10 text-white ml-0.5 md:ml-1" fill="currentColor" viewBox="0 0 24 24">

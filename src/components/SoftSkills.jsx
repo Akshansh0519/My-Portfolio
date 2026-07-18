@@ -63,11 +63,11 @@ const SoftSkillCard = ({ skill, index }) => {
     <div
       data-aos="fade-up"
       data-aos-delay={index * 100}
-      className="bg-[#f8f8f8] border border-gray-200 rounded-3xl p-6 hover:scale-[1.03] hover:bg-white hover:border-[#ff2a2a]/30 hover:shadow-[0_20px_45px_rgba(255,42,42,0.08)] transition-all duration-500 group flex flex-col items-center text-center justify-between min-h-[220px]"
+      className="bg-[#f8f8f8] border border-gray-200 rounded-3xl p-6 hover:scale-[1.03] hover:bg-white hover:border-cyan-400/30 hover:shadow-[0_20px_45px_rgba(34,211,238,0.15)] transition-all duration-500 group flex flex-col items-center text-center justify-between min-h-[220px]"
     >
       <div className="flex flex-col items-center">
         {/* SVG icon — consistent monoline style, no OS-rendered emoji */}
-        <div className="text-gray-600 mb-4 p-3 bg-gray-100 rounded-2xl group-hover:bg-[#ff2a2a]/10 group-hover:text-[#ff2a2a] group-hover:scale-110 transition-all duration-300">
+        <div className="text-gray-600 mb-4 p-3 bg-gray-100 rounded-2xl group-hover:bg-cyan-400/10 group-hover:text-cyan-400 group-hover:scale-110 transition-all duration-300">
           {Icon}
         </div>
         <h3 className="text-gray-900 text-lg font-black tracking-tight mb-2 uppercase">

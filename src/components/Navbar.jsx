@@ -26,7 +26,7 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isOpen 
-          ? 'bg-[#ff2a2a] py-4'
+          ? 'bg-[#0a0f1a]/95 backdrop-blur-xl py-4 border-b border-cyan-500/20'
           : isScrolled 
             ? 'bg-transparent py-4' 
             : 'bg-transparent py-6'
@@ -37,7 +37,7 @@ const Navbar = () => {
         {/* Left Side: Logo/Name */}
         <div className="flex items-center">
           <a href="#home" className="text-white text-2xl font-black tracking-tight whitespace-nowrap">
-            {personalInfo.brandName}<span className="text-red-500">.</span>
+            {personalInfo.brandName}<span className="text-cyan-400">.</span>
           </a>
         </div>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
             >
               {link}
               {/* Smooth hover underline */}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>
@@ -79,7 +79,7 @@ const Navbar = () => {
       {/* Mobile Slide-Down Menu */}
       <div 
         className={`md:hidden absolute top-full left-0 w-full transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-96 py-4 opacity-100 bg-[#ff2a2a] shadow-2xl' : 'max-h-0 opacity-0 bg-transparent'
+          isOpen ? 'max-h-96 py-4 opacity-100 bg-[#0a0f1a]/98 backdrop-blur-xl shadow-2xl border-b border-cyan-500/20' : 'max-h-0 opacity-0 bg-transparent'
         }`}
       >
         <div className="flex flex-col px-6 space-y-4">
@@ -88,7 +88,7 @@ const Navbar = () => {
               key={link} 
               href={`#${link.toLowerCase()}`}
               onClick={() => setIsOpen(false)}
-              className="text-white hover:text-black font-bold text-lg border-b border-white/20 pb-2 transition-colors"
+              className="text-white/80 hover:text-cyan-400 font-bold text-lg border-b border-white/10 pb-2 transition-colors"
             >
               {link}
             </a>

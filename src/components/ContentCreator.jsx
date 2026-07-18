@@ -126,7 +126,7 @@ const ContentCreator = () => {
             href={socialLinks.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-8 py-4 rounded-full bg-[#ff2a2a] text-white font-bold text-base hover:bg-red-600 hover:shadow-[0_0_30px_rgba(255,42,42,0.35)] transition-all duration-400 group"
+            className="flex items-center gap-3 px-8 py-4 rounded-full bg-cyan-500 text-black font-bold text-base hover:bg-cyan-400 hover:shadow-[0_0_30px_rgba(0,240,255,0.35)] transition-all duration-400 group"
           >
             {/* GitHub SVG */}
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

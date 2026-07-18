@@ -44,7 +44,7 @@ export const heroContent = {
 
 export const aboutContent = {
   heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Akshansh Ranjan</span>, an EEE undergrad with a Computer Science minor at <strong>BITS Pilani, Hyderabad Campus</strong>. I specialize in <span class="text-black font-black">building robust microservice architectures</span> and production-grade AI systems — bridging multi-agent LLM orchestration with event-driven backends and real-time collaborative dashboards.`,
+  bio: `Hi, my name is <span class="text-cyan-400 text-xl font-black mx-1 tracking-wide uppercase">Akshansh Ranjan</span>, an EEE undergrad with a Computer Science minor at <strong class="text-white">BITS Pilani, Hyderabad Campus</strong>. I specialize in <span class="text-cyan-400 font-black">building robust microservice architectures</span> and production-grade AI systems — bridging multi-agent LLM orchestration with event-driven backends and real-time collaborative dashboards.`,
   techStack: ["Python", "Node.js", "React"],
 };
 

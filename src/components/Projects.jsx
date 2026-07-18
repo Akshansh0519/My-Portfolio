@@ -181,7 +181,7 @@ const ImageCarousel = ({ images, projectTitle }) => {
               onClick={() => goTo(i)}
               className={`relative overflow-hidden rounded-md border transition-all duration-300 ${
                 i === active
-                  ? 'w-12 h-8 border-red-500/60 shadow-[0_0_8px_rgba(255,42,42,0.4)]'
+                  ? 'w-12 h-8 border-cyan-400/60 shadow-[0_0_8px_rgba(0,240,255,0.4)]'
                   : 'w-8 h-6 border-white/10 opacity-40 hover:opacity-70 hover:border-white/30'
               }`}
             >
@@ -232,7 +232,7 @@ const ProjectCard = ({ project, aosDelay }) => {
       data-aos-delay={aosDelay}
       className={`group/card relative rounded-2xl p-[1px] transition-all duration-500 ${
         project.isFlagship
-          ? 'bg-gradient-to-br from-red-500/50 via-white/10 to-red-500/30 hover:from-red-500 hover:via-red-400/30 hover:to-red-500/60'
+          ? 'bg-gradient-to-br from-cyan-500/20 via-indigo-500/10 to-cyan-500/10 hover:from-cyan-500/40 hover:via-indigo-500/20 hover:to-cyan-500/30'
           : 'bg-white/10 hover:bg-white/20'
       }`}
     >
@@ -250,7 +250,7 @@ const ProjectCard = ({ project, aosDelay }) => {
             <div>
               {/* Badge */}
               {project.badge && (
-                <span className="inline-block text-xs font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20 mb-4">
+                <span className="inline-block text-xs font-bold tracking-widest uppercase text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20 mb-4">
                   {project.badge}
                 </span>
               )}
@@ -280,7 +280,7 @@ const ProjectCard = ({ project, aosDelay }) => {
                 {project.techTags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
+                    className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-cyan-500/20 hover:border-cyan-500/30 hover:text-cyan-300 transition-all duration-300 cursor-default"
                   >
                     {tag}
                   </span>
@@ -309,7 +309,7 @@ const ProjectCard = ({ project, aosDelay }) => {
                   rel={project.links.demo ? "noopener noreferrer" : undefined}
                   className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                     project.links.demo
-                      ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)]'
+                      ? 'bg-cyan-500 text-black hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]'
                       : 'bg-white/5 text-white/40 border border-white/10 cursor-not-allowed'
                   }`}
                 >
@@ -323,7 +323,7 @@ const ProjectCard = ({ project, aosDelay }) => {
                   href={project.links.frontendDemo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white text-sm font-semibold hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)] transition-all duration-300"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500 text-black text-sm font-semibold hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300"
                 >
                   <ExternalLinkIcon />
                   Frontend Demo

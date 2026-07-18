@@ -22,7 +22,7 @@ const MiniProjectCard = ({ title, badge, description, techTags, liveLink, images
         <div>
           {/* Header & Badge */}
           <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
-            <span className="inline-block text-xs font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
+            <span className="inline-block text-xs font-bold tracking-widest uppercase text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
               {badge}
             </span>
             {isToggleable && (
@@ -31,7 +31,7 @@ const MiniProjectCard = ({ title, badge, description, techTags, liveLink, images
                   type="button"
                   onClick={() => setActiveImageIndex(0)}
                   className={`px-3 py-1 rounded-full font-semibold transition-all ${
-                    activeImageIndex === 0 ? 'bg-red-500 text-white shadow-sm' : 'text-white/60 hover:text-white'
+                    activeImageIndex === 0 ? 'bg-cyan-500 text-black shadow-sm' : 'text-white/60 hover:text-white'
                   }`}
                 >
                   🌙 Dark Mode
@@ -40,7 +40,7 @@ const MiniProjectCard = ({ title, badge, description, techTags, liveLink, images
                   type="button"
                   onClick={() => setActiveImageIndex(1)}
                   className={`px-3 py-1 rounded-full font-semibold transition-all ${
-                    activeImageIndex === 1 ? 'bg-red-500 text-white shadow-sm' : 'text-white/60 hover:text-white'
+                    activeImageIndex === 1 ? 'bg-cyan-500 text-black shadow-sm' : 'text-white/60 hover:text-white'
                   }`}
                 >
                   ☀️ Light Mode
@@ -71,7 +71,7 @@ const MiniProjectCard = ({ title, badge, description, techTags, liveLink, images
             {techTags.map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
+                className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-cyan-500/20 hover:border-cyan-500/30 hover:text-cyan-300 transition-all duration-300 cursor-default"
               >
                 {tag}
               </span>
@@ -85,7 +85,7 @@ const MiniProjectCard = ({ title, badge, description, techTags, liveLink, images
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#ff2a2a] text-white text-sm font-bold hover:bg-red-600 hover:shadow-[0_0_25px_rgba(255,42,42,0.5)] transition-all duration-300 transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-500 text-black text-sm font-bold hover:bg-cyan-400 hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] transition-all duration-300 transform hover:-translate-y-0.5"
           >
             <ExternalLinkIcon />
             Launch Live Dashboard

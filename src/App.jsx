@@ -22,7 +22,7 @@ function App() {
       <Hero />
       <About />
       <TechnicalSkills />
-      <Services />
+      {/* <Services /> */}
       <Projects />
       <MiniProjects />
       <ContentCreator />
